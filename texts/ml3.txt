@@ -1,0 +1,17 @@
+{noun:California city/placename}, California - The latest in {adjective:tech} apps has
+arrived on the scene: {$name1:domain name}! Announcing ${number:digits only}
+million in funding from {name: last name associated with a VC} Venture
+Partners, {$name1} aims to disrupt the {$noun1:industry} industry by
+{$verb1:gerund ("ing" form of verb); transitive, of persons} {$noun2:plural, persons},
+leveraging the latest in {noun:tech} technology. And it will do it by Q1 of
+next year!
+
+That might sound hard to believe. But {name:startup CEO name}, {$name1}
+CEO, says, "We are totally committed to transforming the {$noun1} industry. I
+personally have years of experience {$verb1} {$noun2}, as do my
+co-founders!"
+
+This is not at all {adjective:negative, said of people}. {$name1} advisor,
+Grant Grierson formerly of {name:big Silicon Valley company}, explains:
+"The {$name1} approach to {$verb1} is unlike anything I've ever seen. It
+will change the world. It's {adjective:hype}!"
