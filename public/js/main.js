@@ -1,7 +1,8 @@
-var whichtext = ''; // The madlib text to display.
-var metadata = {};  // The madlib metadata for display.
+// Script uses some globals.
+var text = "";      // The madlib text (with blanks).
+var metadata = {};  // The madlib metadata for display in header.
 var blanks = [];    // The madlib blanks to show to the user.
-var header = $("<div/>").addClass("header");    // The header for this madlib.
+var header = $("<div/>").addClass("header"); // The header for this madlib.
 
 $(document).ready(function() {
   load_collapsible_options();
@@ -10,13 +11,13 @@ $(document).ready(function() {
 function load_collapsible_options() {
   $('.logo').click(load_collapsible_options);
   load_madlib_options();
-  $('.collapsible').collapsible();
+  $('.collapsible').collapsible(); // From Materialize.
   set_links_to_individual_madlibs();
 }
 
 // Prepare madlib options on page load or restart.
 function load_madlib_options() {
-  var collapse = $("<ul/>").addClass("collapsible");
+  var collapse = $("<ul/>").addClass("collapsible"); // Materialize classes...
   all_metadata.forEach(function(datum) {
     var item = $("<li/>");
     var div1 = $("<div/>").addClass("collapsible-header")
@@ -60,7 +61,6 @@ function set_text(whichtext) {
   // 'whichtext' is just the name of the text.
   text = texts[whichtext];
   metadata = load_whichtext_metadata(whichtext);
-  console.log(metadata);
 }
 
 // Prepares blanks based on text.
@@ -134,6 +134,9 @@ function process_text_for_blanks() {
   $("#submit").click(process_answers).click(display_text_with_replacements);
 }
 
+// Grabs user's input answers.
+// Attaches user's input answer to each blank in easy-to-process "blanks" object.
+// Most of the logic here is necessary to handle user-supplied variables.
 function process_answers() {
   blanks.forEach(function(blank) {
     blank["answer"] = $("#" + blank["id"]).val();
@@ -146,7 +149,6 @@ function process_answers() {
       blank["answer"] = varanswers[blank["pos"]];
     }
   });
-  return blanks;
 }
 
 // Last step: display the text using the user's supplied words.
