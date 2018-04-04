@@ -1,0 +1,14 @@
+[
+  {
+    "file": "ml1.txt",
+    "title": "Fun in the Sun",
+    "author": "Larry Sanger",
+    "description": "A droll trip to the beach"
+  },
+  {
+    "file": "ml2.txt",
+    "title": "Homeschooling",
+    "author": "Larry Sanger",
+    "description": "A pair of homeschoolers gets in trouble"
+  }
+]

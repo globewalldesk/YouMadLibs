@@ -1,0 +1,15 @@
+body {
+  margin: 10px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.page-header {
+  height: 35px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+.collapsible-body:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+Last summer, I went with my good friend {$name1:first name of someone you know}
+to the beach in {$noun1:U.S. state}. The temperature was {number:digits only},
+which made bodysurfing very {adjective:unpleasant somehow}. The cause of the
+disturbance was a recent {noun:natural disaster} that had occurred in
+{noun:U.S. place name}, but that didn't stop {$name1}.
+
+Our swim went {adverb}. After that, we decided to go beachcombing. It was a
+very {adjective:personal reaction with "ing" or "ful"} walk, because we found
+{noun:physical objects, plural}, {$noun2:physical objects, plural}, and a
+{noun:physical object, singular}. Can you imagine? And in the end, {$name1} had
+to pull {$noun2} out of my feet!
+
+I guess we'll never go to the beach in {$noun1} again!

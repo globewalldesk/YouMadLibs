@@ -1,0 +1,11 @@
+Our {adjective:said of kids} homeschoolers are hard to handle.
+
+{$name1:child's name}'s favorite subject is {noun:school subject} while
+{$name2:child's name}'s is {noun:another school subject}. The trouble is that
+the kids {verb:plural present intransitive} whenever they study together. But
+this makes Mama very {adjective:describes a person}, which isn't always a
+good thing.
+
+{$name1} and {$name2} are good students, but they are bad {$noun1:plural, role/job}.
+As {$noun1} they are very {adjective:bad in kid way}. But since Mama
+{verb:third person present transitive} {$name1} and {$name2}, maybe it's OK.

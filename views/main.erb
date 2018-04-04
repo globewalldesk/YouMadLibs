@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mad Libs!</title>
+  <meta charset="utf-8">
+  <script>
+    var texts = <%= @text %>;
+    var all_metadata = <%= @madlibs %>;
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<header class="page-header"><span class="logo">Mad Libs!</span></header>
+<div class="main"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
