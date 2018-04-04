@@ -3,10 +3,10 @@ This is just a version of Mad Libs written mostly in JavaScript, with a
 Ruby/Sinatra backend. 
 
 ## Install
-Clone the repo into a new directory. Make sure Ruby is installed (v. 2.4.0), 
-then run `bundle install`. You might need to install some gems by hand but I 
-don't think so. If you have trouble installing, email me at
-yo.larrysanger@gmail.com.
+Clone the repo into a new directory. Make sure Ruby is installed (v. 2.4.0),
+as well as bundler (`gem install bundler`) then run `bundle install`. You might 
+need to install some gems by hand but I don't think so. If you have trouble 
+installing, email me at yo.larrysanger@gmail.com.
 
 ## Run
 To run the server, which is Sinatra (not Rails), simply navigate to the
