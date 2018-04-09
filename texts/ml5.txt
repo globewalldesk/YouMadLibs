@@ -1,0 +1,1 @@
+{$name1:Person in the room} invented a new magic trick. In it, he is supposed to pull a {noun} out of my {noun:Part of the body}. 

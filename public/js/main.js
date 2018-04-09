@@ -77,10 +77,12 @@ function process_text_for_blanks() {
   var mtext = text.replace(/\n/gm, " ");     // Get rid of newlines for massaged text.
   mtext = mtext.replace(/ {2,}/gm, " ");     // Double spaces look bad.
   var rawBlanks = mtext.match(/{.+?}/gm);    // Find the blanks in the massaged text.
+  // NOTE on USER VARIABLES: madlib authors can reuse the user's answer with what I call a "user variable"; 
+  // e.g., {$noun2}. The script takes one answer from the user, then automatically substitutes it in for every 
+  // instance of the variable in the madlib text. 
   // Process text (2): construct new (blank) text with spans labeled with ids.
-  // NOTE: madlib authors can reuse the user's answer with what I call a "user variable"; e.g., {$noun2}.
-  var variables = varanswers = []; // List of user-supplied variables.
-  var counter = 0;
+  var variables = varanswers = []; // List of user variables.
+  var counter = 0;  // Gives a unique identifier for each blank in the text (user variable or not).
   var blanks = [];
   // Gather data from rawBlanks (four different kinds) to be used in printing blanks on the user's screen.
   rawBlanks.forEach(function(blank) {
@@ -113,11 +115,12 @@ function process_text_for_blanks() {
     counter++;
   });
 
-  // Assemble the title, description, and blanks for the user to fill in.
+  // Assemble the title, description, and text boxes (corresponding to blanks) for the user to fill in.
   var title = $("<h3/>").text(metadata["title"]);
   var description = $("<h4/>").text(metadata["description"]);
+  var author = $("<p/>").text("From the fecund brain of " + metadata["author"]);
   var header = $("<div/>").addClass("header");
-  header.append(title).append(description);
+  header.append(author).append(title).append(description);
   // Construct blanks by going through ids (could go thru blanks, skipping dupes).
   var answers = $("<div/>").addClass("answers");
   blanks.forEach(function(blank) {
@@ -210,7 +213,7 @@ function start_new_madlib() {
   div.append("Author: ").append(author);
   // Create a textarea with some instructions to the user and a submit button.
   var examples = "Example blanks: {noun}, {adverb:ending in -ly}, {$name1}, {$name1:will be repeated throughout this madlib}"
-  var textarea = $("<textarea/>").addClass("new-ml-textarea").css({height: "300px", maxWidth: "500px"}).
+  var textarea = $("<textarea/>").addClass("new-ml-textarea").addClass("materialize-textarea").css({height: "300px", maxWidth: "500px"}).
                                   attr({placeholder: examples}).val(newtext);
   div.append("Enter your madlib text:<br>")
      .append(textarea);
@@ -269,7 +272,7 @@ function validate_new_madlib() {
   }
   dl = $("#description").val().length;
   if (dl < 30 || dl > 60) {
-    user_msg = "Your title is " + dl + " characters long. It should be between 30 and 60."
+    user_msg = "Your description is " + dl + " characters long. It should be between 30 and 60."
     report_user_msg();
     return;
   }
