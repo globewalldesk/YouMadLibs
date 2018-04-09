@@ -4,7 +4,7 @@ million in funding from {name: last name associated with a VC} Venture
 Partners, {$name1} aims to disrupt the {$noun1:industry} industry by
 {$verb1:gerund ("ing" form of verb); transitive, of persons} {$noun2:plural, persons},
 leveraging the latest in {noun:tech} technology. And it will do it by Q1 of
-next year!
+next year!a
 
 That might sound hard to believe. But {name:startup CEO name}, {$name1}
 CEO, says, "We are totally committed to transforming the {$noun1} industry. I

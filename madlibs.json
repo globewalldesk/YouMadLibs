@@ -1,20 +1,26 @@
 [
   {
-    "file": "ml1.txt",
+    "file": "ml1",
     "title": "Fun in the Sun",
     "author": "Larry Sanger",
     "description": "A droll trip to the beach"
   },
   {
-    "file": "ml2.txt",
+    "file": "ml2",
     "title": "Homeschooling",
     "author": "Larry Sanger",
     "description": "A pair of homeschoolers gets in trouble"
   },
   {
-    "file": "ml3.txt",
+    "file": "ml3",
     "title": "The Latest Hot Startup!",
     "author": "Larry Sanger",
     "description": "Read about the hotness that is this freakingly cool app!"
+  },
+  {
+    "file": "ml4",
+    "title": "Leavin' on a Jet Plane",
+    "author": "Larry Sanger",
+    "description": "Confusion and hilarity at 35,000 feet"
   }
 ]

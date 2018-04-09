@@ -4,8 +4,10 @@
   <title>Mad Libs!</title>
   <meta charset="utf-8">
   <script>
-    var texts = <%= @text %>;
-    var all_metadata = <%= @madlibs %>;
+    // Load data from server.
+    var all_texts = <%= @texts %>;          // All the texts.
+    var all_metadata = <%= @madlibs %>;     // All the metadata about the texts.
+    all_metadata = all_metadata.reverse();  // Display most recently created first.
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->
@@ -16,7 +18,7 @@
   <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-<header class="page-header"><span class="logo">Mad Libs!</span></header>
+<header class="page-header"><span class="logo">Mad Libs!</span><span class="new-ml-header">+New Mad Lib</span></header>
 <div class="main"></div>
 <script src="js/main.js"></script>
 </body>

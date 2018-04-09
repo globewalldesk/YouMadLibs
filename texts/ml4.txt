@@ -1,0 +1,19 @@
+It was the first time for Mr. {name:first name of old person} {$name1:last name of same old person} on an airplane. Mr. {$name1} was completely {$adjective1:human emotion} and could not stop {verb:gerund, synonym of "talk" + ing} to his seatmate, the {number:age of an adult}-year-old Ms. {$name2:another last name}.
+
+"Oh, I am so {$adjective1}, Mrs. {$name2}. I'm {$adjective2:old}, but this is all new to me!"
+
+"You're {$adjective2} indeed! It's 'Ms.', you {noun:mild insult}."
+
+"Pardon me," Mr. {$name1} said, chuckling. "But did you {verb:synonym of 'see', infinitive, transitive} the stewardess? I thought they were supposed to be {adjective:personal quality} and {adjective:good-looking somehow}..."
+
+"Oh <i>please,</i>" Ms. {$name2} said. "You're very {adjective:synonym of "old-fashioned"}, aren't you?"
+
+"And why is everyone {verb:activity of passengers, verb phrase beginning with "ing" word}?"
+
+"People do all sorts of things on a plane."
+
+"Even {$verb1:infinitive, something shocking two people do}?" whispered Mr. {$name1}, jabbing his {noun:moveable body part located above the waist} in the direction of some fellow passengers.
+
+"Well, you know," whispered Ms. {$name2} back, "that's something seatmates often do on planes. We could, you know..."
+
+Mr. {$name1} gave her a look of {adjective:reaction visible on the face} and was quiet for the rest of the trip.

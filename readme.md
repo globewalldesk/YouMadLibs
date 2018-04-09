@@ -53,8 +53,12 @@ cake.
 
 ## Programming notes
 All the logic is in JavaScript/jquery, located at public/js/main.js. The only 
-thing the server does is deliver the datafiles. Almost all of the HTML is 
-created on the fly by jquery. The CSS/JS library is Materialize, which my 
-11-year-old son introduced me to.
+thing the server does is deliver the datafiles and save new madlibs submitted
+by users. Almost all of the HTML is created on the fly by jquery. The CSS/JS 
+library is Materialize, which my 11-year-old son introduced me to.
 
-The code is messy and definitely could use some refactoring.
+The code uses quite a few functions that don't, strictly speaking, need to be
+functions. It does this just for neatness (and future reusability). Rather than
+keeping track of arguments and making the functions self-contained, I've used
+several global variables (some, like `all_texts`, `newtext`, and `user_msg`, 
+being quite important).

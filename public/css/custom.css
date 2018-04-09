@@ -1,7 +1,15 @@
 body {
   margin: 10px;
 }
+.page-header {
+  width: 100%;
+}
 .logo:hover {
+  cursor: pointer;
+}
+.new-ml-header {
+  font-size: 0.8em;
+  margin-left: 20px;
   cursor: pointer;
 }
 .page-header {
@@ -12,4 +20,10 @@ body {
 .collapsible-body:hover {
   background-color: aliceblue;
   cursor: pointer;
+}
+.user-msg {
+  color: red;
+}
+.save-button {
+  margin-left: 15px;
 }
