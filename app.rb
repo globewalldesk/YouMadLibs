@@ -2,6 +2,9 @@ require 'sinatra'
 enable :sessions
 require 'json'
 
+set :protection, :except => :frame_options
+set :bind, '0.0.0.0'
+
 def load_texts
   texts = {}
   dirnames = Dir["texts/*.txt"]
@@ -15,7 +18,7 @@ end
 get('/') do
   @madlibs = File.read('madlibs.json')
   @texts = load_texts
-  erb :main
+  erb :index, :locals => { host: request.host }
 end
 
 post('/save') do
