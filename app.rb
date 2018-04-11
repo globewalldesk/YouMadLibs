@@ -1,6 +1,6 @@
 require 'sinatra'
-enable :sessions
 require 'json'
+enable :sessions
 
 set :protection, :except => :frame_options
 set :bind, '0.0.0.0'
@@ -9,15 +9,16 @@ def load_texts
   texts = {}
   dirnames = Dir["texts/*.txt"]
   dirnames.each do |text|
-    fileID = text[6..-5] # E.g., 'ml23'
-    texts[fileID] = File.read(text)
+    textid = text[6..-5]
+    texts[textid] = File.read(text)
   end
   texts.to_json
 end
 
 get('/') do
+  puts "hi there"
   @madlibs = File.read('madlibs.json')
-  @texts = load_texts
+  @all_texts = load_texts
   erb :index, :locals => { host: request.host }
 end
 
@@ -28,19 +29,17 @@ post('/save') do
     madlib['file']
   end
   file_numbers = filenames.map do |filename|
-    filename.gsub(/^ml(\d+)$/, '\1')
+    filename[/\d+/].to_i
   end
-  num = file_numbers.max.to_i + 1
-  new_fileID = "ml#{num}"
+  num = file_numbers.max + 1
+  new_filename = "ml#{num}.txt"
+  new_file_id = "ml#{num}"
   # Save text to new filename.
-  File.open("texts/#{new_fileID}.txt", "w") do |file|
+  File.open("texts/#{new_filename}", "w") do |file|
     file.write(params[:newtext])
   end
   # Open and load madlibs.json.
-  new_madlib_data = {"file" => new_fileID, 
-                     "title" => params['title'], 
-                     "author" => params['author'], 
-                     "description" => params['description']}
+  new_madlib_data = {'file' => new_file_id, 'title' => params['title'], "author" => params['author'], "description" => params['description']}
   madlibs.push(new_madlib_data)
   # Add new madlib data to file.
   File.open("madlibs.json", "w") do |file|

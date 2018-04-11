@@ -25,7 +25,17 @@ function load_collapsible_options() {
 // Prepare menu of madlibs the user can try out.
 function load_madlib_options() {
   var collapse = $("<ul/>").addClass("collapsible"); // Materialize classes...
-  all_metadata.forEach(function(datum) {
+  // Get the file IDs so you can reverse them.
+  metadata_ids = all_metadata.map(function(datum) {
+    return datum["file"];
+  });
+  // Nicely reversed now.
+  metadata_ids = metadata_ids.sort((x, y) => parseInt(x) < parseInt(y)).reverse();
+  // Construct list of madlibs by iterating over file IDs, because
+  // all_metadata is an unsorted object.
+  metadata_ids.forEach(function(id) {
+    // Find the metadata about the madlib with this ID.
+    datum = all_metadata.find(function(md) { return md["file"] == id });
     var item = $("<li/>");
     var div1 = $("<div/>").addClass("collapsible-header")
       .text(datum["title"]);
@@ -236,7 +246,7 @@ function start_new_madlib() {
     }
   });
   main.append(form_for_save);
-  // Set the button event listeners.
+  // Set the button event listeners; saves the result.
   $(".validate-button").click(validate_new_madlib);
   form_for_save.submit(function(e) {
     e.preventDefault();
@@ -244,7 +254,13 @@ function start_new_madlib() {
       if (confirm("You won't be able to edit this mad lib after this (until we add editing capability). OK?")) {
         $.post("/save", new_madlib(), function() {
           console.log("looks successful");
-         });
+         })
+          // If successfully saved, reload the page so the user can see the link.
+          .done(function() {
+            alert("Your madlib should be at the top of the list!");
+            location.reload();
+          })
+          .fail(function() { alert("There was a problem with the server. Not saved.") });
       }
     }
   });

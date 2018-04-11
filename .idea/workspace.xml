@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e47037d9-866b-4857-b423-036a68f07ba0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/main.erb" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/texts/ml5.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/madlibs.iml" afterPath="$PROJECT_DIR$/.idea/madlibs.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.rb" afterPath="$PROJECT_DIR$/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madlibs.json" afterPath="$PROJECT_DIR$/madlibs.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.erb" afterPath="$PROJECT_DIR$/views/index.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,25 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-              <folding>
-                <marker date="1523409902077" expanded="true" signature="13671:13677" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="13677:13683" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="13683:13689" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14055:14061" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14061:14067" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14067:14073" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14949:14955" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14955:14961" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="14961:14967" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="15760:15766" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="15766:15772" ph=" " />
-                <marker date="1523409902077" expanded="true" signature="15772:15778" ph=" " />
-              </folding>
+            <state relative-caret-position="327">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,27 +54,50 @@
       <file leaf-file-name="madlibs.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/madlibs.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="432">
+              <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
               <folding>
-                <marker date="1523409902073" expanded="true" signature="4:22" ph="{&quot;file&quot;: &quot;ml1.txt&quot;...}" />
-                <marker date="1523409902073" expanded="true" signature="764:769" ph="{&quot;file&quot;: &quot;ml3.txt&quot;...}" />
+                <marker date="1523475004337" expanded="true" signature="465:617" ph="{&quot;file&quot;: &quot;ml4&quot;...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.rb">
+      <file leaf-file-name="index.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="260" column="30" lean-forward="false" selection-start-line="260" selection-start-column="30" selection-end-line="260" selection-end-column="30" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1523474883448" expanded="true" signature="14475:14481" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="14481:14487" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="14487:14493" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="14859:14865" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="14865:14871" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="14871:14877" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="15753:15759" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="15759:15765" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="15765:15771" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="16564:16570" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="16570:16576" ph=" " />
+                <marker date="1523474883448" expanded="true" signature="16576:16582" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -84,34 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.answers</find>
-      <find>answers</find>
-      <find>#main</find>
-      <find>descrip</find>
-      <find>madlibs</find>
-      <find>main</find>
-      <find>addClass</find>
-      <find>load_</find>
-      <find>text</find>
-      <find>[&quot;file</find>
-      <find>click</find>
-      <find>set_text</find>
-      <find>yo</find>
-      <find>load_text</find>
       <find>display_text</find>
       <find>d</find>
       <find>.append(te</find>
@@ -128,6 +127,20 @@
       <find>text =</find>
       <find>process_answers</find>
       <find>.logo</find>
+      <find>texts</find>
+      <find>text</find>
+      <find>all_texts</find>
+      <find>all_meta</find>
+      <find>txt</find>
+      <find>filename</find>
+      <find>fileID</find>
+      <find>new_madlib</find>
+      <find>reverse</find>
+      <find>user_msg</find>
+      <find>sort</find>
+      <find>alert(&quot;</find>
+      <find>saved_msg</find>
+      <find>saved_ms</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,16 +151,18 @@
       <list>
         <option value="$PROJECT_DIR$/gemfile" />
         <option value="$PROJECT_DIR$/config.ru" />
-        <option value="$PROJECT_DIR$/texts/ml1.txt" />
         <option value="$PROJECT_DIR$/texts/ml2.txt" />
         <option value="$PROJECT_DIR$/views/main.erb" />
         <option value="$PROJECT_DIR$/public/css/custom.css" />
-        <option value="$PROJECT_DIR$/madlibs.json" />
         <option value="$PROJECT_DIR$/texts/ml3.txt" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
-        <option value="$PROJECT_DIR$/app.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/views/index.erb" />
+        <option value="$PROJECT_DIR$/test.rb" />
+        <option value="$PROJECT_DIR$/app.rb" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/madlibs.json" />
+        <option value="$PROJECT_DIR$/texts/ml1.txt" />
       </list>
     </option>
   </component>
@@ -186,8 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,10 +230,17 @@
               <item name="madlibs" type="462c0819:PsiDirectoryNode" />
               <item name="texts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="madlibs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madlibs" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,12 +249,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Beginning Javascript code/Previous Chapters/ch16_example1.html" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,25 +284,26 @@
       <option name="presentableId" value="Default" />
       <updated>1522510966119</updated>
       <workItem from="1522510967827" duration="64950000" />
-      <workItem from="1523413226349" duration="801000" />
+      <workItem from="1523413226349" duration="12908000" />
+      <workItem from="1523473346283" duration="1708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65751000" />
+    <option name="totallyTimeSpent" value="79566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="928" height="972" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11111111" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -293,6 +314,25 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -307,23 +347,104 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/ml1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madlibs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <marker date="1523475004337" expanded="true" signature="465:617" ph="{&quot;file&quot;: &quot;ml4&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="81" lean-forward="false" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1523474883448" expanded="true" signature="14475:14481" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14481:14487" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14487:14493" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14859:14865" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14865:14871" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14871:14877" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15753:15759" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15759:15765" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15765:15771" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16564:16570" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16570:16576" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16576:16582" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523409902077" expanded="true" signature="13671:13677" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="13677:13683" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="13683:13689" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14055:14061" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14061:14067" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14067:14073" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14949:14955" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14955:14961" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14961:14967" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15760:15766" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15766:15772" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15772:15778" ph=" " />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1523474883448" expanded="true" signature="14475:14481" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14481:14487" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14487:14493" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14859:14865" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14865:14871" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14871:14877" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15753:15759" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15759:15765" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15765:15771" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16564:16570" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16570:16576" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16576:16582" ph=" " />
           </folding>
         </state>
       </provider>
@@ -333,20 +454,12 @@
         <state relative-caret-position="342">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <marker date="1523409902073" expanded="true" signature="4:22" ph="{&quot;file&quot;: &quot;ml1.txt&quot;...}" />
-            <marker date="1523409902073" expanded="true" signature="764:769" ph="{&quot;file&quot;: &quot;ml3.txt&quot;...}" />
+            <marker date="1523475004337" expanded="true" signature="465:617" ph="{&quot;file&quot;: &quot;ml4&quot;...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.erb" />
     <entry file="file://$PROJECT_DIR$/app.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -364,13 +477,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gemfile" />
-    <entry file="file://$PROJECT_DIR$/madlibs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/madlibs.html" />
     <entry file="file://$PROJECT_DIR$/../Beginning Javascript code/Previous Chapters/ch16_example1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="649">
@@ -385,21 +492,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/texts/ml2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="10" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/main.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.erb" />
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -411,20 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/texts/ml3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/texts/ml1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -433,50 +512,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/madlibs.json">
+    <entry file="file://$PROJECT_DIR$/texts/ml5.txt" />
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <marker date="1523409902073" expanded="true" signature="4:22" ph="{&quot;file&quot;: &quot;ml1.txt&quot;...}" />
-            <marker date="1523409902073" expanded="true" signature="764:769" ph="{&quot;file&quot;: &quot;ml3.txt&quot;...}" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+    <entry file="file://$PROJECT_DIR$/texts/ml10.txt" />
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-          <folding>
-            <marker date="1523409902077" expanded="true" signature="13671:13677" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="13677:13683" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="13683:13689" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14055:14061" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14061:14067" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14067:14073" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14949:14955" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14955:14961" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="14961:14967" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15760:15766" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15766:15772" ph=" " />
-            <marker date="1523409902077" expanded="true" signature="15772:15778" ph=" " />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="468">
+          <caret line="260" column="30" lean-forward="false" selection-start-line="260" selection-start-column="30" selection-end-line="260" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1523474883448" expanded="true" signature="14475:14481" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14481:14487" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14487:14493" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14859:14865" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14865:14871" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="14871:14877" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15753:15759" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15759:15765" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="15765:15771" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16564:16570" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16570:16576" ph=" " />
+            <marker date="1523474883448" expanded="true" signature="16576:16582" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madlibs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <marker date="1523475004337" expanded="true" signature="465:617" ph="{&quot;file&quot;: &quot;ml4&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/ml4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/ml3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/ml2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texts/ml1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="19" />
           <folding />
         </state>
       </provider>

@@ -4,10 +4,8 @@
   <title>Mad Libs!</title>
   <meta charset="utf-8">
   <script>
-    // Load data from server.
-    var all_texts = <%= @texts %>;          // All the texts.
-    var all_metadata = <%= @madlibs %>;     // All the metadata about the texts.
-    all_metadata = all_metadata.reverse();  // Display most recently created first.
+    var all_texts = <%= @all_texts %>;
+    var all_metadata = <%= @madlibs %>;
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->
