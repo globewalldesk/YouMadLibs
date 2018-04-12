@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mad Libs!</title>
+  <meta charset="utf-8">
+  <script>
+    var all_texts = <%= @ml_texts.to_json %>;
+    console.log("all texts #1 id = " + all_texts[0]["author"]);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<%= yield %>
+<script src="js/main.js"></script>
+</body>
+</html>

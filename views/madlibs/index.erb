@@ -1,0 +1,8 @@
+<ul>
+  <% @ml_texts.each do |text| %>
+      <li>
+        <h4><a href="/ml_texts/<%= text.id %>"><%= text.title %></a></h4>
+        <p>Created: <%= text.created_at %></p>
+      </li>
+  <% end %>
+</ul>

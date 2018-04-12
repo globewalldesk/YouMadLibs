@@ -1,5 +1,5 @@
 // Script uses some globals for simplicity of working with some common items.
-// Note, the globals all_texts and all_metadata are defined in main.erb.
+// Note, the global all_texts is defined in layout.erb.
 var text = "";        // The displayed text for the madlib the user chooses (to fill in the blanks).
 var metadata = {};    // The metadata for the madlib the user chooses.
 var newtext = "";     // Madlib text the user submits.
@@ -11,12 +11,19 @@ $(document).ready(function() {
   load_collapsible_options();
 });
 
+
+///////////////////////////////////////////////////////////////////////////////
+/////PREP////LIST//////////////////////////////////////////////////////////////
+//////////////OF////MADLIBS/////TO////TRY//////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
 // Used both on initial retrieval of site and when user chooses a new madlib to fill out.
 function load_collapsible_options() {
-  // Two page header items...
+  // Listeners for two page header items...
   $('.logo').click(load_collapsible_options);
   $('.new-ml-header').click(start_new_madlib);
-  // ...and "collapsible" selection of links to madlibs to try.
+  // ...and "collapsible" selection of (links to) madlibs to try.
   load_madlib_options();
   $('.collapsible').collapsible(); // From Materialize.
   set_links_to_individual_madlibs();
@@ -25,25 +32,15 @@ function load_collapsible_options() {
 // Prepare menu of madlibs the user can try out.
 function load_madlib_options() {
   var collapse = $("<ul/>").addClass("collapsible"); // Materialize classes...
-  // Get the file IDs so you can reverse them.
-  metadata_ids = all_metadata.map(function(datum) {
-    return datum["file"];
-  });
-  // Nicely reversed now.
-  metadata_ids = metadata_ids.sort((x, y) => parseInt(x) < parseInt(y)).reverse();
-  // Construct list of madlibs by iterating over file IDs, because
-  // all_metadata is an unsorted object.
-  metadata_ids.forEach(function(id) {
-    // Find the metadata about the madlib with this ID.
-    datum = all_metadata.find(function(md) { return md["file"] == id });
+  all_texts.forEach(function(txt) {
     var item = $("<li/>");
     var div1 = $("<div/>").addClass("collapsible-header")
-      .text(datum["title"]);
+      .text(txt["title"]);
     var div2 = $("<div/>").addClass("collapsible-body");
-    var desc = datum["description"];
-    if (datum["author"]) { desc += "<br>By " + datum["author"]; }
-    var fileID = datum["file"];
-    var span = $("<span/>").addClass(fileID).html(desc);
+    var desc = txt["description"];
+    if (txt["author"]) { desc += "<br>By " + txt["author"]; }
+    var id = txt["id"];
+    var span = $("<span/>").addClass("" + id).html(desc);
     div2.append(span);
     item.append(div1);
     item.append(div2);
@@ -56,30 +53,26 @@ function load_madlib_options() {
 function set_links_to_individual_madlibs() {
   // Iterate through all available madlib data. When there are many available, 
   // this will have to be updated to load only a few at a time.
-  all_metadata.forEach(function(datum) {
-    var fileID = datum["file"];
-    $(document).ready(function() {                          // IS THIS REALLY NECESSARY?
-      // Create unique identifier for this link from fileID; but link from the enclosing div.
-      $('.' + fileID).parent()
-        .click(function() {
-          // On click, set the text and metadata to display...
-          set_text(datum["file"]);
-          // and then process the text to locate the blanks, and display them.
-          process_text_for_blanks();
-        });
-    });
+  all_texts.forEach(function(txt) {
+    var id = txt["id"];
+    // Create unique identifier for this link from id; but link from the enclosing div.
+    $('.' + id).parent()
+      .click(function() {
+        // On click, set the text and metadata to display...
+        text = txt["ml_text"];  // Select the text.
+        metadata = txt;  // Assign the whole txt object to metadata.
+        // and then process the text to locate the blanks, and display them.
+        process_text_for_blanks();
+      });
   });
 }
 
-// Given the file ID of the madlib clicked, grab its text and metadata.
-function set_text(whichtext) {
-  // 'whichtext' is just the name of the text.
-  text = all_texts[whichtext];
-  // Need to find out which metadata object is associated with this text.
-  metadata = all_metadata.find(function(datum) {
-    if (datum["file"] === whichtext) { return datum }
-  });
-}
+
+///////////////////////////////////////////////////////////////////////////////
+/////PROCESS////BLANKS/////////////////////////////////////////////////////////
+/////////////////////////AND///USER///ANSWERS//////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
 
 // Prepares blanks based on text, appends them to the page with submit button, and sets up event listeners.
 function process_text_for_blanks() {
@@ -158,8 +151,8 @@ function process_text_for_blanks() {
     .attr({id: 'submit'}).html("Submit");
   answers.append(submit);
   $(".main").html(header).append(answers);
-  $("#submit").click({"blanks": blanks}, process_answers).click({"header": header, "blanks": blanks}, 
-    display_text_with_replacements);
+  $("#submit").click({"blanks": blanks}, process_answers)
+    .click({"header": header, "blanks": blanks}, display_text_with_replacements);
 }
 
 // Grabs user's input answers.
@@ -202,14 +195,14 @@ function display_text_with_replacements(d) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
+/////START///NEW///////////////////////////////////////////////////////////////
+/////////////////////////MADLIB///AUTHORED///BY///USER/////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 
-// Allows a user to start a new madlib.
+// Allows a user to write the text of a whole new madlib.
 function start_new_madlib() {
-  // Prep user message and wrapper.
+  // Prep user message (for validation feedback) and wrapper.
   $(".user-msg").remove();
   user_msg = $("<div/>").addClass("user-msg").html(user_msg);
   var div = $("<div/>").addClass("textarea-wrapper").append(user_msg);
@@ -223,8 +216,9 @@ function start_new_madlib() {
   div.append("Author: ").append(author);
   // Create a textarea with some instructions to the user and a submit button.
   var examples = "Example blanks: {noun}, {adverb:ending in -ly}, {$name1}, {$name1:will be repeated throughout this madlib}"
-  var textarea = $("<textarea/>").addClass("new-ml-textarea").addClass("materialize-textarea").css({height: "300px", maxWidth: "500px"}).
-                                  attr({placeholder: examples}).val(newtext);
+  var textarea = $("<textarea/>").addClass("new-ml-textarea")
+    .addClass("materialize-textarea").css({height: "300px", maxWidth: "500px"})
+    .attr({placeholder: examples, id: "ml_text"}).val(newtext);
   div.append("Enter your madlib text:<br>")
      .append(textarea);
   // Construct the form with check and save buttons.
@@ -266,48 +260,46 @@ function start_new_madlib() {
   });
 }
 
-// Validate new mad lib!
+// Validate the new mad lib!
 function validate_new_madlib() {
-    console.log("I'm in yer function, validatin yer text!");
+  console.log("I'm in yer function, validatin yer text!");
   // Validate title.
-  if ($("#title").val() == "") {
-    user_msg = "Add a title, please."
+  var title = $("#title");
+  if (! title.val()) {
+    user_msg = "Add a title, please.";
     report_user_msg();
     return;
   }
-  if ($("#title").val().length > 30) {
-    user_msg = "Your title is " + $("#title").val().length + " characters long. Maximum is 30."
+  if (title.val().length > 25) {
+    user_msg = "Your title is " + $("#title").val().length + " characters long. Maximum is 25.";
     report_user_msg();
     return;
   }
   // Validate description.
-  if ($("#description").val() == "") {
-    user_msg = "Add a description, please."
+  var description = $("#description");
+  if (! description.val()) {
+    user_msg = "Add a description, please.";
     report_user_msg();
     return;
   }
-  dl = $("#description").val().length;
-  if (dl < 30 || dl > 60) {
-    user_msg = "Your description is " + dl + " characters long. It should be between 30 and 60."
+  dl = description.val().length;
+  if (dl < 25 || dl > 60) {
+    user_msg = "Your description is " + dl + " characters long. It should be between 25 and 60.";
     report_user_msg();
     return;
   }
   // Validate author.
-  if ($("#author").val() == "") {
-    user_msg = "Since you didn't add an author, we filled in \"Anonymous.\" You can still change this."
-    $("#author").val("Anonymous");
-    report_user_msg();
-    return;
-  }
-  if ($("#title").val().length > 30) {
-    user_msg = "Your title is " + $("#title").val().length + " characters long. Maximum is 30."
+  var author = $("#author");
+  if (! author.val()) {
+    user_msg = "Since you didn't add an author, we filled in \"Anonymous.\" You can still change this.";
+    author.val("Anonymous");
     report_user_msg();
     return;
   }
   // Grab new madlib text.
   newtext = $(".new-ml-textarea").val();
   // ML should exist.
-  if (newtext == "") {
+  if (! newtext.trim()) {
     user_msg = "Please enter a new madlib. ";
     report_user_msg();
     return;
@@ -315,13 +307,13 @@ function validate_new_madlib() {
   // ML should have at least one sentence's worth...we'll say 10 words.
   var split_newtext = newtext.split(/ /mg);
   if (split_newtext.length < 10) {
-    user_msg = "Not enough words (10 minimum). "
+    user_msg = "Not enough words (10 minimum). ";
     report_user_msg();
     return;
   }
   // ML should have at least one {}.
   if (! /\{.+?\}/.test(newtext) ) {
-    user_msg = "There should be at least one blank, e.g., something like this: {noun}"
+    user_msg = "There should be at least one blank, e.g., something like this: {noun}";
     report_user_msg();
     return;
   }
@@ -335,14 +327,17 @@ function validate_new_madlib() {
     return;
   }
   // Every { should be followed by } within 80 characters (on the same line).
+  var bad = false;
   var curlies = newtext.match(/\{(.+?)\}/g);
   curlies.forEach(function(curly) {
+    console.log(curly.length);
     if (curly.length > 81) {
       user_msg = "This item is too long (" + curly.length + " characters; max. 80 allowed):<br>&nbsp;&nbsp;&nbsp;<code>" + curly + "</code>";
       report_user_msg();
-      return;
+      bad = true;
     }
   });
+  if (bad) { return }
   // After stripping $ and number, as well as : and whatever follows that, each POS should be found on a canonical list.
   var poses = curlies.map(function(curly) {
     return curly.replace(/\{(.+?)\}/, "$1")   // Strip brackets.
@@ -351,10 +346,9 @@ function validate_new_madlib() {
                 .replace(/(.+?)\d+/, "$1");   // Strip numbers from end of user variables.
   });
   var good_poses = "noun name number pronoun verb adjective adverb preposition conjunction interjection".split(/ /);
-  var bad = false;
   poses.forEach(function(pos) {
     if (! good_poses.includes(pos)) {
-      user_msg = "Begin each blank with a part of speech. Your '" + pos + "' isn't on the list:<br>&nbsp;&nbsp;&nbsp;" + 
+      user_msg = "Begin each blank with a part of speech. Your '" + pos + "' isn't on the list:<br>&nbsp;&nbsp;&nbsp;" +
         good_poses.join(", ");
       report_user_msg();
       bad = true;
@@ -377,12 +371,11 @@ function validate_new_madlib() {
                "<br><code>&nbsp;&nbsp;&nbsp;{noun} {noun:a dessert} {$adjective1} {$verb1:plural, past, transitive}</code>";
     report_user_msg();
     bad = true;
-    return;
   });
   if (bad) { return }
   // The text shouldn't be too damn long.
   if (newtext.length > 6500) {
-    user_msg = "Wow, that's " + newtext.length + " characters long. That's over our upper limit of 6500 characters."
+    user_msg = "Wow, that's " + newtext.length + " characters long. That's over our upper limit of 6500 characters.";
     report_user_msg();
     return;
   }
@@ -394,16 +387,17 @@ function validate_new_madlib() {
   return true; // For when saving.
 }
 
+// Append and then clear the user message (used during validation).
 function report_user_msg() {
   $(".user-msg").html("");
   $(".user-msg").append(user_msg);
   user_msg = "";
 }
 
-// Prepares user's new madlib data for posting (after validating),
+// Prepares user's new madlib data for posting (after validating).
 function new_madlib() {
   return { 
-    "newtext": newtext,
+    "ml_text": newtext,
     "title": $("#title").val(),
     "description": $("#description").val(),
     "author": $("#author").val()
