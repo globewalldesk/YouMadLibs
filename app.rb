@@ -2,7 +2,10 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 require 'json'
+require 'sequel'
 enable :sessions
+
+Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/madlibs')
 
 set :database, {adapter: "sqlite3", database: "madlibs.sqlite3"}
 set :protection, :except => :frame_options
