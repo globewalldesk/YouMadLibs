@@ -3,7 +3,7 @@ require 'sinatra/activerecord'
 require 'json'
 enable :sessions
 
-set :database, {adapter: "sqlite3", database: "db/madlibs.sqlite3"}
+#set :database, {adapter: "sqlite", database: "db/madlibs.sqlite3"}
 
 class Madlib < ActiveRecord::Base
 end
