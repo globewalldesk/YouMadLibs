@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require './environments'
 require 'json'
 enable :sessions
 
-#set :database, {adapter: "sqlite", database: "db/madlibs.sqlite3"}
+set :database, {adapter: "sqlite3", database: "madlibs.sqlite3"}
 
 class Madlib < ActiveRecord::Base
 end
@@ -18,18 +19,16 @@ helpers do
   end
 end
 
-class App < Sinatra::Base
-  get('/') do
-    @ml_texts = Madlib.order("created_at DESC")
-    @title = "Welcome."
-    erb :"index"
-  end
+get('/') do
+  @ml_texts = Madlib.order("created_at DESC")
+  @title = "Welcome."
+  erb :"index"
+end
 
-  post('/save') do
-    puts params.inspect
-    new_madlib_data = {title: params['title'], author: params['author'], description: params['description'], ml_text: params['ml_text']}
-    new_madlib = Madlib.new(new_madlib_data)
-    new_madlib.save
-    redirect '/'
-  end
+post('/save') do
+  puts params.inspect
+  new_madlib_data = {title: params['title'], author: params['author'], description: params['description'], ml_text: params['ml_text']}
+  new_madlib = Madlib.new(new_madlib_data)
+  new_madlib.save
+  redirect '/'
 end
