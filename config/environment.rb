@@ -1,5 +1,5 @@
 configure :development do
-  set :database, 'sqlite3:///dev.db'
+  set :database, {adapter: "sqlite3", database: "db/madlibs.sqlite3"}
   set :show_exceptions, true
 end
 

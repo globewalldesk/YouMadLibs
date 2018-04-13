@@ -1,10 +1,8 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-require './environments'
+require './config/environment'
 require 'json'
 enable :sessions
-
-set :database, {adapter: "sqlite3", database: "madlibs.sqlite3"}
 
 class Madlib < ActiveRecord::Base
 end

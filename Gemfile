@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 gem 'sinatra', '2.0.1'
+gem 'pg', '1.0.0'
 gem 'activerecord', '5.2.0'
 gem 'sinatra-activerecord', '2.0.13'
 gem 'sinatra-flash', '0.3.0'                # Probably not nec.
@@ -17,5 +18,4 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
 end
