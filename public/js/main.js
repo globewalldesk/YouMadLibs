@@ -330,7 +330,6 @@ function validate_new_madlib() {
   var bad = false;
   var curlies = newtext.match(/\{(.+?)\}/g);
   curlies.forEach(function(curly) {
-    console.log(curly.length);
     if (curly.length > 81) {
       user_msg = "This item is too long (" + curly.length + " characters; max. 80 allowed):<br>&nbsp;&nbsp;&nbsp;<code>" + curly + "</code>";
       report_user_msg();

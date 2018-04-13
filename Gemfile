@@ -18,5 +18,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'sequel', '5.7.1'
 end
