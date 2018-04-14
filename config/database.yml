@@ -9,7 +9,7 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
   adapter: postgresql
   database: mydb
-  host: <%= ENV['DATABASE_HOST'] %>
+  host: localhost # <%= ENV['DATABASE_HOST'] %> # Shouldn't work...but trying anyway.
   database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
