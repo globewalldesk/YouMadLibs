@@ -1,8 +1,9 @@
 development:
-  adapter: postgresql
+  adapter: sqlite3
+  database: db/madlibs.sqlite
   host: localhost
-  username: user
-  database: app-dev
+  pool: 5
+  timeout: 5000
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
