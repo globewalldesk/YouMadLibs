@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './config/environment'
-require 'json'
 enable :sessions
 
 class Madlib < ActiveRecord::Base

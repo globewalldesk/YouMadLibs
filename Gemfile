@@ -10,7 +10,6 @@ gem 'sinatra-redirect-with-flash', '0.2.1'  # Probably not nec.
 gem 'rake', '10.4.2'
 gem 'rack', '2.0.3'
 gem 'sass', '3.4.24'
-gem 'json', '2.1.0'
 
 group :development do
   gem 'sqlite3', '1.3.13'
