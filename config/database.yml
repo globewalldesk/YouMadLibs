@@ -1,14 +1,16 @@
 development:
-  adapter: sqlite3
-  database: db/madlibs.sqlite
+  adapter: postgresql
   host: localhost
-  pool: 5
-  timeout: 5000
+  username: user
+  database: app-dev
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
   adapter: postgresql
   database: mydb
-  host: localhost
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   pool: 5
   timeout: 5000
