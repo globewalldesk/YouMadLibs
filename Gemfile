@@ -7,7 +7,6 @@ gem 'sinatra-activerecord', '2.0.13'
 gem 'rake', '10.4.2'
 gem 'rack', '2.0.3'
 gem 'sass', '3.4.24'
-gem 'pg', '1.0.0'
 
 group :development do
   gem 'sqlite3', '1.3.13'
@@ -15,4 +14,5 @@ group :development do
 end
 
 group :production do
+  gem 'pg', '1.0.0'
 end
