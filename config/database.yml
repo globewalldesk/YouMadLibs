@@ -10,10 +10,3 @@ production:
   database: mydb
   pool: 25
   url: <%= ENV['DATABASE_URL'] %>
-
-  #postgresql://username:password@db-shared-us-east-1-or-something.blah:1234/db
-  #if db url env var looks something like above you dont need these
-  #host: <%= ENV['DATABASE_HOST'] %>
-  #database: <%= ENV['DATABASE_NAME'] %>
-  #username: <%= ENV['DATABASE_USER'] %>
-  #password: <%= ENV['DATABASE_PASSWORD'] %>

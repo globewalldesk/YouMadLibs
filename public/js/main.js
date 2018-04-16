@@ -8,6 +8,7 @@ var positive_message_displayed = false; // Used to track whether "Looks good so 
 
 // Loaded on initial retrieval of page.
 $(document).ready(function() {
+  modal = $(".modal");
   load_collapsible_options();
 });
 
@@ -20,13 +21,38 @@ $(document).ready(function() {
 
 // Used both on initial retrieval of site and when user chooses a new madlib to fill out.
 function load_collapsible_options() {
+  // NOTE: THE FOLLOW NEEDS TO BE PUT INTO ITS OWN FUNCTION.
   // Listeners for two page header items...
   $('.logo').click(load_collapsible_options);
-  $('.new-ml-header').click(start_new_madlib);
+  $('.start-new-madlib').click(start_new_madlib);
+  $('.login-logout').click(login); // Materialize modal.
   // ...and "collapsible" selection of (links to) madlibs to try.
   load_madlib_options();
   $('.collapsible').collapsible(); // From Materialize.
   set_links_to_individual_madlibs();
+}
+
+function login() {
+  var login_form = $("<form>").attr({action: "/auth/login", method: "post"});
+  var modalContentTitle = $("<h4>").text("Log In");
+  var username_input = $("<input>").attr({type: "text", name: "user[username]"});
+  var password_input = $("<input>").attr({type: "password", name: "user[password]"});
+  var modalContent = $("<div>").addClass("modal-content");
+  modalContent.append(modalContentTitle,
+    "Username (for your madlib byline):", username_input,
+    "Password:", password_input);
+  var modalFooter = $("<div>").addClass("modal-footer");
+  var submit = $("<input>").attr({href: "#!", type: "submit", value: "Log in"})
+    .addClass("btn-flat modal-close waves-effect waves-green modal-action");
+  modalFooter.append(submit);
+  modalContent.append(modalFooter);
+  login_form.append(modalContent);
+  modal = $("#modal1");
+  modal.html(login_form);
+  modal.modal();
+  $(document).ready( function() {
+    $("#name").focus();
+  });
 }
 
 // Prepare menu of madlibs the user can try out.
@@ -230,10 +256,10 @@ function start_new_madlib() {
     .text("Save for all to use!");
   var form_for_save = $("<form/>").append(validate_button).append(save_button);
   var main = $(".main").html(div);
+  title.focus();
   // Listen for keypresses; check each one to see if you need to remove a positive message.
   $(".new-ml-textarea").keypress(function() {
     if (positive_message_displayed) {
-      console.log("listening");
       user_msg = "";
       report_user_msg();
       positive_message_displayed = false;

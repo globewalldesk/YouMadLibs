@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <script>
     var all_texts = <%= @ml_texts.to_json %>;
+    var flash = <%= flash.to_json %>;
+    console.log("flash contents = " + flash.toSource());
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->

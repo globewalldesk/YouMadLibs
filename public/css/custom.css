@@ -7,10 +7,14 @@ body {
 .logo:hover {
   cursor: pointer;
 }
-.new-ml-header {
+.header-item {
   font-size: 0.8em;
   margin-left: 20px;
   cursor: pointer;
+  float: right;
+}
+.modal-trigger {
+  color: black;
 }
 .page-header {
   height: 35px;
