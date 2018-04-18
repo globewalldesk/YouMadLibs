@@ -37,6 +37,10 @@ use Warden::Manager do |config|
     end
   end
 
+  get '/auth/login' do
+    redirect '/'
+  end
+
   post '/auth/login' do
     env['warden'].authenticate!
     flash[:success] = "You're logged in."
