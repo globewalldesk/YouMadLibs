@@ -10,9 +10,6 @@ require 'bcrypt'
 
 enable :sessions
 
-class Madlib < ActiveRecord::Base
-end
-
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
   # session support for your app
