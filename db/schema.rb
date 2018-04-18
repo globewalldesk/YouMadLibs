@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_12_143442) do
+ActiveRecord::Schema.define(version: 2018_04_18_015021) do
 
   create_table "madlibs", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "author"
     t.text "ml_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "password", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

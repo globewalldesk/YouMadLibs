@@ -179,6 +179,7 @@ function process_text_for_blanks() {
   $(".main").html(header).append(answers);
   $("#submit").click({"blanks": blanks}, process_answers)
     .click({"header": header, "blanks": blanks}, display_text_with_replacements);
+  $("#0").focus();
 }
 
 // Grabs user's input answers.

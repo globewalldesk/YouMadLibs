@@ -8,8 +8,6 @@ gem 'rake', '10.4.2'
 gem 'rack', '2.0.3'
 gem 'sass', '3.4.24'
 gem 'warden', '1.2.7'
-gem 'data_mapper', '1.2.0'
-gem 'dm-sqlite-adapter', '1.2.0'
 gem 'bcrypt', '3.1.11'
 gem 'sinatra-flash', '0.3.0'
 
