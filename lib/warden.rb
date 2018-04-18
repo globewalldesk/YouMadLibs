@@ -23,11 +23,11 @@ Warden::Strategies.add(:password) do
     user = User.find_by(username: params['user']['username'])
 
     if user.nil?
-      fail!('The username you entered does not exist.')
+      throw(:warden, message: 'The username you entered does not exist.')
     elsif user.authenticate(params['user']['password'])
       success!(user)
     else
-      fail!('The username and password combination make me nervous.')
+      throw(:warden, message: 'The username and password combination make me nervous.')
     end
   end
 end
