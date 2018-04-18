@@ -15,3 +15,11 @@ configure :production do
       :encoding => 'utf8'
   )
 end
+
+class MyApp < Sinatra::Base
+  # get assets
+  get '/public/*' do
+    env['PATH_INFO'].sub!('/public', '')
+    settings.environment.call(env)
+  end
+end

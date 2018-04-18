@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.0'
 
+gem 'sprockets', '3.7.1'
 gem 'sinatra', '2.0.1'
 gem 'activerecord', '5.2.0'
 gem 'sinatra-activerecord', '2.0.13'

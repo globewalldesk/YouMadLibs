@@ -1,39 +1,35 @@
-require 'sinatra'
-require 'sinatra/base'
-require 'sinatra/activerecord'
-require 'sinatra/flash'
-require './config/environment'
+require 'rubygems'
 require 'bundler'
 Bundler.require
-require 'rubygems'
+require 'sinatra'
+require 'sinatra/base'
+require 'sinatra/flash'
+require 'sinatra/activerecord'
+require 'warden'
 require 'bcrypt'
-require './models/user'
-require './lib/warden' # Includes warden (authentication) routes.
-enable :sessions
 
-####
-## NEXT STEP: do config in database.yml; then test that system operates with ActiveRecord!
-####
+enable :sessions
 
 class Madlib < ActiveRecord::Base
 end
 
-class MadLibsApp < Sinatra::Base
+# modular Sinatra app inherit from Sinatra::Base
+class MyApp < Sinatra::Base
+  # session support for your app
   use Rack::Session::Pool
+  # flash messages are not integrated, yet
+  # but loaded just in case someone finds the time
   register Sinatra::Flash
   set :root, File.dirname(__FILE__)
+  # files in static are served on "root"
+  set :public_folder, File.dirname(__FILE__) + '/static'
 end
 
-get('/') do
-  @ml_texts = Madlib.order("created_at DESC")
-  @title = "Welcome."
-  erb :"index"
-end
-
-post('/save') do
-  puts params.inspect
-  new_madlib_data = {title: params['title'], author: params['author'], description: params['description'], ml_text: params['ml_text']}
-  new_madlib = Madlib.new(new_madlib_data)
-  new_madlib.save
-  redirect '/'
-end
+# require libs; includes warden (authentication) routes.
+Dir['./lib/*.rb'].each { |file| require_relative file }
+# require configurations
+Dir['./config/*.rb'].each { |file| require_relative file }
+# require models
+Dir['./models/*.rb'].each { |file| require_relative file }
+# require routes
+Dir['./routes/*.rb'].each { |file| require_relative file; puts "file = #{file}" }
