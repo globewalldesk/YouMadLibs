@@ -4,9 +4,10 @@
   <title>Mad Libs!</title>
   <meta charset="utf-8">
   <script>
-    var all_texts = <%= @ml_texts.to_json %>;
+    const all_texts = <%= @ml_texts.to_json %>;
     var flash = <%= flash.to_json %>;
-    console.log("flash contents = " + flash.toSource());
+    const username = <%= @username.to_json %>;
+    const state = <%= @state.to_json %>; // What should be loaded
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->

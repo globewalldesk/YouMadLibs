@@ -24,22 +24,69 @@ function load_collapsible_options() {
   // NOTE: THE FOLLOW NEEDS TO BE PUT INTO ITS OWN FUNCTION.
   // Listeners for two page header items...
   $('.logo').click(load_collapsible_options);
+  render_account_links();
   $('.start-new-madlib').click(start_new_madlib);
-  $('.login-logout').click(login); // Materialize modal.
   // ...and "collapsible" selection of (links to) madlibs to try.
   load_madlib_options();
   $('.collapsible').collapsible(); // From Materialize.
   set_links_to_individual_madlibs();
+  if (state) dispatch_state();
+  toast_flashes();
 }
 
-function login() {
+function dispatch_state() {
+  switch (state) {
+    case 'signup':
+      signup();
+      break;
+  }
+  state = "";
+}
+
+function render_account_links() {
+  $(".start-new-madlib").text("+New Mad Lib");
+  if (username) {
+    $(".login-logout-text").text(username);
+    $('.login-logout').click(render_logout);
+  } else {
+    $(".signup-text").text("Sign Up");
+    $(".signup").click(signup);
+    $(".login-logout-text").text("Log In");
+    $('.login-logout').click(render_login);
+  }
+}
+
+// This can become a modal for submitting a new password as well.
+function render_logout() {
+  var login_form = $("<form>").attr({action: "/auth/logout", method: "get"});
+  var modalContentTitle = $("<h4>").text("Going so soon?");
+  var modalContent = $("<div>").addClass("modal-content");
+  modalContent.append(modalContentTitle);
+  var modalFooter = $("<div>").addClass("modal-footer");
+  var submit = $("<input>").attr({href: "#!", type: "submit", value: "Log out"})
+    .addClass("btn-flat modal-close waves-effect waves-green modal-action");
+  modalFooter.append(submit);
+  modalContent.append(modalFooter);
+  login_form.append(modalContent);
+  modal = $("#modal1");
+  modal.html(login_form);
+  modal.modal();
+}
+
+function render_login() {
   var login_form = $("<form>").attr({action: "/auth/login", method: "post"});
   var modalContentTitle = $("<h4>").text("Log In");
-  var username_input = $("<input>").attr({type: "text", name: "user[username]"});
-  var password_input = $("<input>").attr({type: "password", name: "user[password]"});
+  var username_input = $("<input>").attr({
+    type: "text",
+    name: "user[username]"
+  });
+  var password_input = $("<input>").attr({
+    type: "password",
+    name: "user[password]"
+  });
   var modalContent = $("<div>").addClass("modal-content");
   modalContent.append(modalContentTitle,
-    "Username (for your madlib byline):", username_input,
+    "Username:", username_input,
     "Password:", password_input);
   var modalFooter = $("<div>").addClass("modal-footer");
   var submit = $("<input>").attr({href: "#!", type: "submit", value: "Log in"})
@@ -50,10 +97,58 @@ function login() {
   modal = $("#modal1");
   modal.html(login_form);
   modal.modal();
-  $(document).ready( function() {
+  $(document).ready(function () {
     $("#name").focus();
   });
 }
+
+function signup() {
+  var signup_form = $("<form>").attr({action: "/auth/signup", method: "post"});
+  var modalContentTitle = $("<h4>").text("Make an account");
+  var username_input = $("<input>").attr({
+    type: "text",
+    name: "user[username]"
+  });
+  var password_input = $("<input>").attr({
+    type: "password",
+    name: "user[password]"
+  });
+  var modalContent = $("<div>").addClass("modal-content");
+  modalContent.append(modalContentTitle,
+    "Username (for your madlib byline):", username_input,
+    "Password:", password_input);
+  var modalFooter = $("<div>").addClass("modal-footer");
+  var submit = $("<input>").attr({href: "#!", type: "submit", value: "Sign up"})
+    .addClass("btn-flat modal-close waves-effect waves-green modal-action");
+  modalFooter.append(submit);
+  modalContent.append(modalFooter);
+  signup_form.append(modalContent);
+  modal = $("#modal2");
+  modal.html(signup_form);
+  modal.modal();
+  var modalInstance = M.Modal.getInstance(document.querySelector("#modal2"));
+  if(!modalInstance.isOpen) {
+    modalInstance.open();
+  }
+  $(document).ready(function () {
+    $("#name").focus();
+  });
+}
+
+// Uses pop-up message (a "toast" from Materialize) for any flash messages.
+function toast_flashes() {
+  var msg = "";
+  if (! $.isEmptyObject(flash)) {
+    for (var key in flash) {
+      if (flash.hasOwnProperty(key)) {
+        msg = msg + flash[key] + " ";
+      }
+    }
+    M.toast({html: msg});
+    flash = "";
+  }
+}
+
 
 // Prepare menu of madlibs the user can try out.
 function load_madlib_options() {
@@ -148,8 +243,24 @@ function process_text_for_blanks() {
   var title = $("<h3/>").text(metadata["title"]);
   var description = $("<h4/>").text(metadata["description"]);
   var author = $("<p/>").text("From the fecund brain of " + metadata["author"]);
+  var edit_link = "";
+  var delete_link = "";
+  if (username === metadata["author"]) {
+    edit_link = $("<a/>").html("Edit")
+      .attr({href: "#"}).append("&nbsp;&nbsp;").click(edit_madlib);
+    delete_link = $("<a/>").html("Delete<br/><br/>")
+      .attr({href: "#"}).click(function() {
+        if (confirm("Sure you want to delete this?")) {
+          $.post("/delete", {id: metadata["id"]}, function() {
+            M.toast({html: "Your madlib was deleted!"});
+            location.reload();
+          })
+            .fail(function() { M.toast({html: "There was a problem with the server. Not deleted."}) });
+        }
+      });
+  }
   var header = $("<div/>").addClass("header");
-  header.append(author).append(title).append(description);
+  header.append(author, title, description, edit_link, delete_link);
   // Construct blanks by going through ids (could go thru blanks, skipping dupes).
   var answers = $("<div/>").addClass("answers");
   blanks.forEach(function(blank) {
@@ -234,17 +345,15 @@ function start_new_madlib() {
   user_msg = $("<div/>").addClass("user-msg").html(user_msg);
   var div = $("<div/>").addClass("textarea-wrapper").append(user_msg);
   user_msg = "";
-  // Create title, description, and author fields.
+  // Create title and description fields.
   var title = $("<input/>").attr({type: "text", id: "title", placeholder: "Up to 30 characters"});
   var description = $("<input/>").attr({type: "text", id: "description", placeholder: "30-60 characters"});
-  var author = $("<input/>").attr({type: "text", id: "author", placeholder: "Enter your name or leave blank for \"Anonymous.\""});
   div.append("Title: ").append(title);
   div.append("Description: ").append(description);
-  div.append("Author: ").append(author);
   // Create a textarea with some instructions to the user and a submit button.
   var examples = "Example blanks: {noun}, {adverb:ending in -ly}, {$name1}, {$name1:will be repeated throughout this madlib}"
   var textarea = $("<textarea/>").addClass("new-ml-textarea")
-    .addClass("materialize-textarea").css({height: "300px", maxWidth: "500px"})
+    .addClass("materialize-textarea").css({height: "300px", maxWidth: "800px"})
     .attr({placeholder: examples, id: "ml_text"}).val(newtext);
   div.append("Enter your madlib text:<br>")
      .append(textarea);
@@ -268,27 +377,83 @@ function start_new_madlib() {
   });
   main.append(form_for_save);
   // Set the button event listeners; saves the result.
-  $(".validate-button").click(validate_new_madlib);
+  $(".validate-button").click(validate_madlib);
   form_for_save.submit(function(e) {
     e.preventDefault();
-    if (validate_new_madlib()) {
-      if (confirm("You won't be able to edit this mad lib after this (until we add editing capability). OK?")) {
-        $.post("/save", new_madlib(), function() {
-          console.log("looks successful");
-         })
-          // If successfully saved, reload the page so the user can see the link.
-          .done(function() {
-            alert("Your madlib should be at the top of the list!");
-            location.reload();
-          })
-          .fail(function() { alert("There was a problem with the server. Not saved.") });
-      }
+    if (validate_madlib()) {
+      $.post("/save", construct_new_madlib(), function() {
+        console.log("looks successful");
+       })
+        // If successfully saved, reload the page so the user can see the link.
+        .done(function() {
+          M.toast({html: "Your madlib should be at the top of the list!"});
+          location.reload();
+        })
+        .fail(function() { M.toast({html: "There was a problem with the server. Not saved."}) });
+    }
+  });
+}
+
+function edit_madlib() {
+  // Prep user message (for validation feedback) and wrapper.
+  $(".user-msg").remove();
+  user_msg = $("<div/>").addClass("user-msg").html(user_msg);
+  var div = $("<div/>").addClass("textarea-wrapper").append(user_msg);
+  user_msg = "";
+  // Create "edit" label and title and description fields.
+  var edit_area_title = $("<h4>").html("Edit your madlib!");
+  div.append(edit_area_title);
+  var title = $("<input/>").attr({type: "text", id: "title", placeholder: "Up to 30 characters"}).val(metadata["title"]);
+  var description = $("<input/>").attr({type: "text", id: "description", placeholder: "30-60 characters"}).val(metadata["description"]);
+  div.append("Title: ").append(title);
+  div.append("Description: ").append(description);
+  // Create a textarea with some instructions to the user and a submit button.
+  var examples = "Example blanks: {noun}, {adverb:ending in -ly}, {$name1}, {$name1:will be repeated throughout this madlib}"
+  var textarea = $("<textarea/>").addClass("new-ml-textarea")
+    .addClass("materialize-textarea").css({height: "300px", maxWidth: "800px"})
+    .attr({placeholder: examples, id: "ml_text"}).val(metadata["ml_text"]);
+  div.append("Your madlib text:<br>")
+    .append(textarea);
+  // Construct the form with check and save buttons.
+  var validate_button = $("<input/>").attr({type: "button"})
+    .addClass("validate-button waves-effect waves-light btn blue")
+    .val("Check My Mad Lib!");
+  var save_button = $("<button/>")
+    .addClass("save-button waves-effect waves-light btn green")
+    .text("Save changes!");
+  var form_for_edit = $("<form/>").append(validate_button).append(save_button);
+  var main = $(".main").html(div);
+  title.focus();
+  // Listen for keypresses; check each one to see if you need to remove a positive message.
+  $(".new-ml-textarea").keypress(function() {
+    if (positive_message_displayed) {
+      user_msg = "";
+      report_user_msg();
+      positive_message_displayed = false;
+    }
+  });
+  main.append(form_for_edit);
+  // Set the button event listeners; saves the result.
+  $(".validate-button").click(validate_madlib);
+  form_for_edit.submit(function(e) {
+    e.preventDefault();
+    if (validate_madlib()) {
+      $.post("/save_edit", construct_edited_madlib(), function() {
+        console.log("looks successful");
+      })
+        // If successfully saved, reload the page so the user can see the link.
+        .done(function() {
+          M.toast({html: "Your madlib, '" + metadata['title'] + "', was saved!"});
+        })
+        .fail(function() {
+          M.toast({html: "There was a problem with the server. Edits not saved. (Please save offline.)"})
+        });
     }
   });
 }
 
 // Validate the new mad lib!
-function validate_new_madlib() {
+function validate_madlib() {
   console.log("I'm in yer function, validatin yer text!");
   // Validate title.
   var title = $("#title");
@@ -312,14 +477,6 @@ function validate_new_madlib() {
   dl = description.val().length;
   if (dl < 25 || dl > 60) {
     user_msg = "Your description is " + dl + " characters long. It should be between 25 and 60.";
-    report_user_msg();
-    return;
-  }
-  // Validate author.
-  var author = $("#author");
-  if (! author.val()) {
-    user_msg = "Since you didn't add an author, we filled in \"Anonymous.\" You can still change this.";
-    author.val("Anonymous");
     report_user_msg();
     return;
   }
@@ -415,19 +572,28 @@ function validate_new_madlib() {
 
 // Append and then clear the user message (used during validation).
 function report_user_msg() {
-  $(".user-msg").html("");
-  $(".user-msg").append(user_msg);
+  $(".user-msg").html("").append(user_msg);
   user_msg = "";
 }
 
-// Prepares user's new madlib data for posting (after validating).
-function new_madlib() {
+// Prepares user's madlib data for posting (after validating).
+function construct_new_madlib() {
   return { 
     "ml_text": newtext,
     "title": $("#title").val(),
     "description": $("#description").val(),
-    "author": $("#author").val()
+    "author": (username || "Anonymous")
   }
 }
 
-
+function construct_edited_madlib() {
+  // Assigning to the global 'metadata' updates the edit fields on reload.
+  metadata = {
+    "id": metadata['id'],
+    "ml_text": newtext,
+    "title": $("#title").val(),
+    "description": $("#description").val(),
+    "author": (username || "Anonymous")
+  };
+  return metadata;
+}

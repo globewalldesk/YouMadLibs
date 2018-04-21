@@ -28,11 +28,11 @@ use Warden::Manager do |config|
       user = User.find_by(username: params['user']['username'])
 
       if user.nil?
-        # throw(:warden, message: 'The username you entered does not exist.')
+        throw(:warden, message: 'The username you entered does not exist. ')
       elsif user.authenticate(params['user']['password'])
         success!(user)
       else
-        throw(:warden, message: 'The username and password combination make me nervous.')
+        throw(:warden, message: 'The username and password combination make me nervous. ')
       end
     end
   end
@@ -43,7 +43,8 @@ use Warden::Manager do |config|
 
   post '/auth/login' do
     env['warden'].authenticate!
-    flash[:success] = "You're logged in."
+    flash[:success] = (flash[:success] ? flash[:success] + "You're logged in. " :
+                           "You're logged in. ")
     if session[:return_to].nil?
       redirect '/'
     else
@@ -61,7 +62,8 @@ use Warden::Manager do |config|
   post '/auth/unauthenticated' do
     session[:return_to] = env['warden.options'][:attempted_path]
     puts env['warden.options'][:attempted_path]
-    flash[:error] = env['warden'].message || "You must log in."
+    flash[:error] = env['warden'].message ||
+        "That username-password combination makes me nervous. "
     redirect '/auth/login'
   end
 
@@ -69,6 +71,18 @@ use Warden::Manager do |config|
     env['warden'].authenticate!
     @current_user = env['warden'].user
     erb :protected
+  end
+
+  post '/auth/signup' do
+    user = User.create(params['user'])
+    if user.id
+      flash[:success] = "Welcome aboard, #{user.username}! "
+      redirect '/auth/login', 307 # Imitates a post request.
+    else
+      flash[:error] = user.errors.full_messages
+      session[:state] = 'signup' # The :state indicates the state the JS should load.
+      redirect '/'
+    end
   end
 
 end # of class MyApp
