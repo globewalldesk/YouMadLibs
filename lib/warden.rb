@@ -61,7 +61,6 @@ use Warden::Manager do |config|
 
   post '/auth/unauthenticated' do
     session[:return_to] = env['warden.options'][:attempted_path]
-    puts env['warden.options'][:attempted_path]
     flash[:error] = env['warden'].message ||
         "That username-password combination makes me nervous. "
     redirect '/auth/login'

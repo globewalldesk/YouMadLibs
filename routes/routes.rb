@@ -5,6 +5,8 @@ class MyApp < Sinatra::Base
     @username = env['warden'].user.username if env['warden'].user
     @state = session[:state] if session[:state]
     session[:state] = ""
+    @state_data = session[:state_data] if session[:state_data]
+    session[:state_data] = ""
     erb :index
   end
 
@@ -18,13 +20,14 @@ class MyApp < Sinatra::Base
   end
 
   post('/save_edit') do
-    puts params.inspect
     # Need to check that the user is the same as the author! Need token system?
     ml = Madlib.find(params['id'].to_i)
     edited_madlib_data = {title: params['title'],
                        description: params['description'],
                        ml_text: params['ml_text']}
     ml.update(edited_madlib_data)
+    session[:state] = 'edit_madlib'
+    session[:state_data] = {id: params['id']}
     redirect '/'
   end
 

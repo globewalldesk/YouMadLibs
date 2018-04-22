@@ -4,10 +4,12 @@
   <title>Mad Libs!</title>
   <meta charset="utf-8">
   <script>
-    const all_texts = <%= @ml_texts.to_json %>;
+    var all_texts = <%= @ml_texts.to_json %>;
     var flash = <%= flash.to_json %>;
     const username = <%= @username.to_json %>;
-    const state = <%= @state.to_json %>; // What should be loaded
+    console.log("This is loaded every time.");
+    var state = <%= @state.to_json %>; // What should be loaded.
+    var state_data = <%= @state_data.to_json %> // Info about it.
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Compiled and minified CSS -->
@@ -15,6 +17,10 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>

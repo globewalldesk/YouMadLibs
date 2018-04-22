@@ -16,7 +16,7 @@ Dir['./config/*.rb'].each { |file| require_relative file }
 # require models
 Dir['./models/*.rb'].each { |file| require_relative file }
 # require routes
-Dir['./routes/*.rb'].each { |file| require_relative file; puts "file = #{file}" }
+Dir['./routes/*.rb'].each { |file| require_relative file }
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e47037d9-866b-4857-b423-036a68f07ba0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/globewalldesk.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/madlibs.iml" afterPath="$PROJECT_DIR$/.idea/madlibs.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.rb" afterPath="$PROJECT_DIR$/app.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/warden.rb" afterPath="$PROJECT_DIR$/lib/warden.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.rb" afterPath="$PROJECT_DIR$/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routes.rb" afterPath="$PROJECT_DIR$/routes/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.erb" afterPath="$PROJECT_DIR$/views/index.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.erb" afterPath="$PROJECT_DIR$/views/layout.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,32 +32,32 @@
       <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="324">
+              <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+            <state relative-caret-position="585">
+              <caret line="602" column="74" lean-forward="false" selection-start-line="602" selection-start-column="74" selection-end-line="602" selection-end-column="74" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1524285823601" expanded="true" signature="20715:20721" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="20721:20727" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="20727:20733" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="21118:21124" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="21124:21130" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="21130:21136" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22019:22025" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22025:22031" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22031:22037" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22829:22835" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22835:22841" ph=" " />
-                <marker date="1524285823601" expanded="true" signature="22841:22847" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="20869:20875" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="20875:20881" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="20881:20887" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="21272:21278" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="21278:21284" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="21284:21290" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22173:22179" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22179:22185" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22185:22191" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22983:22989" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22989:22995" ph=" " />
+                <marker date="1524414719184" expanded="true" signature="22995:23001" ph=" " />
               </folding>
             </state>
           </provider>
@@ -70,18 +66,18 @@
       <file leaf-file-name="warden.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/warden.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+            <state relative-caret-position="603">
+              <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,8 +106,8 @@
       <file leaf-file-name="layout.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="90">
+              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -120,8 +116,8 @@
       <file leaf-file-name="index.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,15 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.lo</find>
-      <find>flash =</find>
-      <find>edit</find>
-      <find>metadata</find>
-      <find>edit_</find>
-      <find>edit_ma</find>
-      <find>edit_madlib</find>
-      <find>save for all</find>
-      <find>div</find>
       <find>form_for</find>
       <find>form_for_ed</find>
       <find>Toast</find>
@@ -151,16 +138,25 @@
       <find>edited_mad</find>
       <find>$.post</find>
       <find>construct_m</find>
-      <find>construct</find>
       <find>construct_mad</find>
       <find>500</find>
       <find>300</find>
       <find>autore</find>
       <find>Materialize</find>
-      <find>state</find>
       <find>300px</find>
       <find>edit your</find>
       <find>edit&quot;</find>
+      <find>edit_madlib</find>
+      <find>edit_mad</find>
+      <find>metadata =</find>
+      <find>metadata</find>
+      <find>construct</find>
+      <find>your madlib</find>
+      <find>your madlib,</find>
+      <find>puts</find>
+      <find>p</find>
+      <find>puts</find>
+      <find>state</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,15 +191,15 @@
         <option value="$PROJECT_DIR$/config.ru" />
         <option value="$PROJECT_DIR$/models/madlib.rb" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/app.rb" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/models/user.rb" />
-        <option value="$PROJECT_DIR$/views/index.erb" />
-        <option value="$PROJECT_DIR$/lib/warden.rb" />
         <option value="$PROJECT_DIR$/public/css/custom.css" />
         <option value="$PROJECT_DIR$/views/layout.erb" />
-        <option value="$PROJECT_DIR$/routes/routes.rb" />
+        <option value="$PROJECT_DIR$/lib/warden.rb" />
+        <option value="$PROJECT_DIR$/app.rb" />
+        <option value="$PROJECT_DIR$/views/index.erb" />
         <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/routes/routes.rb" />
       </list>
     </option>
   </component>
@@ -361,18 +357,18 @@
       <workItem from="1523666478437" duration="27603000" />
       <workItem from="1523805462964" duration="11321000" />
       <workItem from="1523935898581" duration="31375000" />
-      <workItem from="1524107155960" duration="33881000" />
+      <workItem from="1524107155960" duration="44292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220118000" />
+    <option name="totallyTimeSpent" value="230529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19237147" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10613599" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -391,26 +387,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19237147" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -420,7 +396,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -446,18 +422,18 @@
           <caret line="33" column="81" lean-forward="false" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1524285823601" expanded="true" signature="20715:20721" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20721:20727" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20727:20733" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21118:21124" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21124:21130" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21130:21136" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22019:22025" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22025:22031" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22031:22037" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22829:22835" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22835:22841" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22841:22847" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20869:20875" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20875:20881" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20881:20887" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21272:21278" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21278:21284" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21284:21290" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22173:22179" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22179:22185" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22185:22191" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22983:22989" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22989:22995" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22995:23001" ph=" " />
           </folding>
         </state>
       </provider>
@@ -484,18 +460,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1524285823601" expanded="true" signature="20715:20721" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20721:20727" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20727:20733" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21118:21124" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21124:21130" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21130:21136" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22019:22025" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22025:22031" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22031:22037" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22829:22835" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22835:22841" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22841:22847" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20869:20875" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20875:20881" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20881:20887" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21272:21278" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21278:21284" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21284:21290" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22173:22179" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22179:22185" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22185:22191" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22983:22989" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22989:22995" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22995:23001" ph=" " />
           </folding>
         </state>
       </provider>
@@ -680,7 +656,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
@@ -690,71 +682,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/warden.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+        <state relative-caret-position="603">
+          <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+        <state relative-caret-position="585">
+          <caret line="602" column="74" lean-forward="false" selection-start-line="602" selection-start-column="74" selection-end-line="602" selection-end-column="74" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1524285823601" expanded="true" signature="20715:20721" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20721:20727" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="20727:20733" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21118:21124" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21124:21130" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="21130:21136" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22019:22025" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22025:22031" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22031:22037" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22829:22835" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22835:22841" ph=" " />
-            <marker date="1524285823601" expanded="true" signature="22841:22847" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20869:20875" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20875:20881" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="20881:20887" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21272:21278" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21278:21284" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="21284:21290" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22173:22179" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22179:22185" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22185:22191" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22983:22989" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22989:22995" ph=" " />
+            <marker date="1524414719184" expanded="true" signature="22995:23001" ph=" " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

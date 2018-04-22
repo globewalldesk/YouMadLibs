@@ -39,6 +39,11 @@ function dispatch_state() {
     case 'signup':
       signup();
       break;
+    case 'edit_madlib':
+      metadata = metadata[state_data['id']];  // Assign the whole txt object to metadata.
+      text = metadata['ml_text'];  // Load the text that was previously being edited.
+      edit_madlib();
+      break;
   }
   state = "";
 }
@@ -441,7 +446,6 @@ function edit_madlib() {
       $.post("/save_edit", construct_edited_madlib(), function() {
         console.log("looks successful");
       })
-        // If successfully saved, reload the page so the user can see the link.
         .done(function() {
           M.toast({html: "Your madlib, '" + metadata['title'] + "', was saved!"});
         })
@@ -595,5 +599,14 @@ function construct_edited_madlib() {
     "description": $("#description").val(),
     "author": (username || "Anonymous")
   };
+  // Since a madlib has been edited, resave all_texts. Might be better if this
+  // was just reloaded from the database after saving, but this is faster.
+  all_texts = all_texts.map( function(txt) {
+    if (txt['id'] === metadata['id']) {
+      return metadata;
+    } else {
+      return txt;
+    }
+  });
   return metadata;
 }
