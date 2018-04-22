@@ -35,21 +35,7 @@ then maybe `heroku restart` if it's not running.
  
 If you have trouble installing, email me at yo.larrysanger@gmail.com.
 
-## Adding new mad libs
-You need to do two things to add a new mad lib: add some metadata in JSON
-format to madlibs.json, and the "file" field must replicate the name you save
-it under in texts/. In texts/, you create a new file (follow the format "ml" + 
-the next number in the series + .txt) for your mad lib text with blanks.
-
-Surround blanks with { and }. While this isn't validated yet, it will be. I'll
-probably limit the available mad lib blanks to noun, name, number, adjective,
-adverb, verb, and maybe a few others. After a colon you can put a (not too long)
-description of what sort of word you want the user to write. To reuse words as
-variables, precede the part of speech with $ and follow it with a number, as in 
-$noun1. Wherever you want that word (supplied by the user) to appear later in
-the mad lib, simply put {$noun1}.
-
-Example:
+## Example madlib text
 > `{$name1:child's name}'s favorite subject is {noun:school subject} while
 {$name2:child's name}'s is {noun:another school subject}. The trouble is that
 the kids {verb:plural present intransitive} whenever they study together. But
@@ -122,16 +108,25 @@ Warden set-up. To do that, I ended up following [this Sinatra "skeleton" by
 Simon Neutert](https://github.com/simonneutert/sinatras-skeleton/blob/master/routes/user_routes.rb)
 (itself based on the tutorials by Chacon and Klise).
 
-That's where I am right now (as of April 18, 2018).
+I still had to do quite a bit of coding on my own to create accounts and then 
+add editing and deleting functions.
+
+That's where I am right now (as of April 22, 2018).
 
 ### Future plans
 
-It's still not possible to create new accounts, but it shouldn't be a huge
-stretch to add them. Once the user account stuff is in place, I want to make
-it possible to do several things:
+The biggest things that need doing are (1) actually make sure only authorized 
+users can edit and delete a madlib and (2) get the latest code working on 
+Heroku (it's not working for some reason as of April 22, 2018).
 
-* Associate madlibs with accounts; allow users to view just their own madlibs.
+I also want to do a massive refactoring of main.js. The whole thing needs to be
+redesigned and made more modular.
+
+Also: 
+
+* Design edit & delete buttons.
+* Create page allowing users to view just their own madlibs.
 * Show numbers of views and of fill-outs of each madlib.
-* Save the fill-outs (if the user so chooses).
+* Save the fill-outs (if the user so chooses); let others display them.
 * Rate madlibs and allow sorting based on rating.
-* Rate fill-outs and allow sorting based on that.
+* Rate fill-outs and allow sorting based on rating.
